@@ -6,7 +6,7 @@ const Search = () =>{
 const { query ,searchPost} = useGlobalContext();
     return (
     <> 
-        <h1>Technical News Website</h1>
+        <h1>Technical Skill Website</h1>
         <form>
 
             <div>

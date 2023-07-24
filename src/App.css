@@ -1,19 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400&family=Poppins:wght@400;60");
 
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poopins",sans-serif;
+  
 }
 
 html{
   font-size: 62.5%;
 }
 body{
-  background-color: rgb(219,230,253);
+  background-image: url();
 }
-h1{
+h1,h3{
   font-size: 3.2rem;
   margin: 2rem 0;
   text-align: center;
@@ -24,7 +24,7 @@ h2{
 }
 p{
   margin: 2rem 0;
-  color: rgb(21,19,60,0.5);
+  color: rgb(255, 255, 255);
   font-weight: 400;
   font-size: 1.6rem;
   display: inline-block;
@@ -44,7 +44,7 @@ span{
   min-width: 20rem;
   width: 40vw;
   padding: 4rem;
-  background-color: white;
+  background-color: #d9d8e6;
   box-shadow: rgb(100,100,111,0.2) 0px 7px 29px 0px;
   border-radius: 0.5rem;
   color: #15133c;
