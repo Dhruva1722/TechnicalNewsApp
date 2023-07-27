@@ -7,40 +7,58 @@
   
 }
 
+
 html{
   font-size: 62.5%;
+  border: 20px solid #34325e6e;
 }
-body{
-  background-image: url();
+.heading {
+ /* background-image: url(../public/assets/bg1.jpg); */
+ /* background-repeat: no-repeat; */
+ background-color: #ececec6e;
+ height: 100px;
+ box-shadow: rgb(100, 100, 111, 0.2) 0px 7px 29px 0px;
+ width: 100%;
+  padding: 30px;
+  text-align: center;
+  color: #2b2857;
 }
+/* .font{
+  font-family: 'Spicy Rice';
+  font-style: Bold;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/spicyrice/v21/uK_24rSEd-Uqwk4jY1RyKvi8Ww.woff2) format('woff2');
+} */
 h1,h3{
   font-size: 3.2rem;
-  margin: 2rem 0;
+  /* margin: 2rem 0; */
   text-align: center;
 }
 h2{
   font-family: "IBM Plex Serif";
-  font-size: 2.4rem;
+  font-size: 2.2rem;
 }
 p{
   margin: 2rem 0;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   font-weight: 400;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   display: inline-block;
 }
 span{
   text-transform: capitalize;
   font-weight: bold;
 }
-.stories-div{
+/* .stories-div{
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  /* flex-direction: row; */
+  /* flex-wrap: wrap;
   gap: 4rem;
-}
-.card{
+  margin-top: 20px;
+} */ */
+/* .card{
   min-width: 20rem;
   width: 40vw;
   padding: 4rem;
@@ -48,22 +66,31 @@ span{
   box-shadow: rgb(100,100,111,0.2) 0px 7px 29px 0px;
   border-radius: 0.5rem;
   color: #15133c;
-}
-.card-button{
-  flex-direction: row;
+} */
+
+.card-button {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center; /* To vertically center the items */
 }
-.card-button a{
+
+.card-button a {
   text-decoration: none;
   color: #92b4ec;
   font-weight: 400;
   font-size: 1.6rem;
+  display: inline-flex;
+  align-items: center; /* To align the icon vertically with the text */
+}
+.deleteBtn {
+  color: #71a0ec;
+  margin-left: 25rem; /* Add some spacing between "Read More" and the icon */
 }
 .card-button a:last-child{
-  color: red;
+  color: #71a0ec;
 }
+
 
 form{
   display: grid;
@@ -79,18 +106,51 @@ input{
   border-bottom: 0.2rem solid #15133c;
   outline: none;
 }
+.search-container {
+  position: relative;
+  width: 50%;
+  margin-top: 15px;
+}
+/* YourComponent.css */
+.search-input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  width: 100%;
+  font-size: 16px;
+}
+/* Optional: Add styles to customize the input on focus */
+.search-input:focus {
+  outline: none;
+  border-color: #b3afec; /* Change this color to your preferred focus color */
+  box-shadow: 0 0 5px #d9d8e6; /* Change this box-shadow to your preferred focus style */
+}
+.search-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #555; /* Change the color of the search icon as needed */
+  pointer-events: none; /* Prevent the icon from blocking input clicks */
+}
 .pagination-btn{
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+}
+#pageno{
+  color: #0a0746;
+  font-size: 16px;
 }
 
 button{
   padding: 0.8rem 2.2rem;
   border: none;
+  border-radius: 5px;
   font-size: 1.6rem;
-  background-color: #15133c;
+  background-color: #504c8d;
   color: white;
   margin: 3rem;
   cursor: pointer;
@@ -118,5 +178,40 @@ button{
   .card{
     min-width: 35rem;
     padding: 2rem;
+  }
+}
+
+.stories-div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  margin-top: 20px;
+}
+
+.card {
+  flex: 0 0 calc((100% - 6rem) / 4); /* Set 4 cards per row, adjust as needed */
+  max-width: calc((100% - 6rem) / 4); /* Set 4 cards per row, adjust as needed */
+  padding: 4rem;
+  height: 200px;
+  background-color: #d9d8e6;
+  box-shadow: rgb(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 0.5rem;
+  color: #15133c;
+  margin-bottom: 2rem; /* Add spacing between rows */
+}
+
+@media (max-width: 1200px) {
+  .card {
+    flex: 0 0 calc((100% - 4rem) / 3); /* Set 3 cards per row for smaller screens */
+    max-width: calc((100% - 4rem) / 3); /* Set 3 cards per row for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 0 0 calc((100% - 2rem) / 2); /* Set 2 cards per row for even smaller screens */
+    max-width: calc((100% - 2rem) / 2); /* Set 2 cards per row for even smaller screens */
   }
 }

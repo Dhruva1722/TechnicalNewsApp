@@ -11,11 +11,11 @@ const Pagination =() =>{
         
             <div className="pagination-btn">
 
-                <button onClick={() =>getPrevPage()}>Previous</button>
-                    <p>
+                <button className="prevBtn" onClick={() =>getPrevPage()}>Previous</button>
+                    <p id="pageno">
                         {page + 1} of {nbPages}
                     </p>
-                <button onClick={() => getNextPage()}>Next</button>
+                <button className="nexyBtn" onClick={() => getNextPage()}>Next</button>
             </div>
         
         

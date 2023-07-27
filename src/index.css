@@ -11,8 +11,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.bgimg{
-  background-image: url(../public/assets/bg1.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}

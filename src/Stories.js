@@ -20,6 +20,8 @@ const {hits, isLoading , removePost} = useGlobalContext();
         const {title , author, objectID,url,num_comments} = curPost;
 
         return (
+
+          
        
            <div className="card" key={objectID}>
                 <h2>{title}</h2>
@@ -27,8 +29,8 @@ const {hits, isLoading , removePost} = useGlobalContext();
                     By <span>{author} </span> | <span>{num_comments}</span> comments
                 </p>
                 <div className="card-button">
-                    <a href={url} target="_blank">Read More</a>
-                    <a href="#" onClick={() => removePost(objectID)}>Remove</a>
+                    <a className="readBtn" href={url} target="_blank">Read More</a>
+                    <a href="#" className="deleteBtn" onClick={() => removePost(objectID)}><i class="fa fa-trash" aria-hidden="true"></i></a>
                 </div>
            </div>
         
